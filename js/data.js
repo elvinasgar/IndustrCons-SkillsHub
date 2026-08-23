@@ -331,6 +331,12 @@ const DB = {
           org: "PMI",
           type: { az: "Peşəkar standart", en: "Professional standard" },
           why: { az: "Cədvəl idarəetməsinin qlobal qəbul edilmiş terminologiyasını verir.", en: "Provides the globally accepted terminology for schedule management." }
+        },
+        {
+          title: "Construction Project Scheduling and Control (5th ed.)",
+          org: "Saleh Mubarak — Wiley",
+          type: { az: "Kitab", en: "Book" },
+          why: { az: "Tikinti menecmenti, mühəndislik və memarlıq tələbələri üçün yazılmış ən çox istinad edilən cədvəlləşdirmə dərsliyidir.", en: "One of the most widely referenced scheduling textbooks, written for construction management, engineering and architecture students." }
         }
       ],
       modules: {
@@ -441,6 +447,57 @@ const DB = {
             },
             correct: 2
           }
+        },
+        {
+          id: "cpf-t4", difficulty: "INTERMEDIATE",
+          title: { az: "Tapşırıq 4 — S-Curve və SPI Hesablaması", en: "Task 4 — S-Curve and SPI Calculation" },
+          role: { az: "Siz Project Controls Engineer rolundasınız.", en: "You are acting as a Project Controls Engineer." },
+          scenario: {
+            az: "4-cü ayın sonuna planlaşdırılan dəyər (PV) 400,000 AZN, faktiki qazanılan dəyər (EV) isə 340,000 AZN-dir.",
+            en: "By the end of month 4, Planned Value (PV) is 400,000 AZN and Earned Value (EV) is 340,000 AZN."
+          },
+          mentor: {
+            az: "SPI (Schedule Performance Index) = EV / PV. SPI < 1 layihənin plandan geri qaldığını göstərir, SPI > 1 isə plandan öndə olduğunu.",
+            en: "SPI (Schedule Performance Index) = EV / PV. SPI < 1 means the project is behind schedule; SPI > 1 means it's ahead."
+          },
+          instructions: {
+            az: "SPI-ni hesablayın və layihənin plandan öndə, geri, yoxsa tam planla üst-üstə olduğunu müəyyən edin.",
+            en: "Calculate the SPI and determine whether the project is ahead, behind, or exactly on plan."
+          },
+          format: { az: "Excel və ya qısa hesablama", en: "Excel or a short calculation" },
+          time: { az: "20 dəqiqə", en: "20 minutes" },
+          criteria: { az: ["SPI düzgün hesablanıb", "Nəticə düzgün şərh edilib"], en: ["SPI correctly calculated", "Result correctly interpreted"] },
+          check: {
+            type: "text",
+            question: { az: "SPI dəyəri neçədir? (340000/400000, 2 onluq rəqəmlə)", en: "What is the SPI value? (340000/400000, to 2 decimal places)" },
+            answers: ["0.85", "0,85"]
+          }
+        },
+        {
+          id: "cpf-t5", difficulty: "ADVANCED",
+          title: { az: "Tapşırıq 5 — Tam Layihə Cədvəlinin Hazırlanması (Real Case)", en: "Task 5 — Building a Full Project Schedule (Real Case)" },
+          role: { az: "Siz Planning Engineer rolundasınız — bu, fənnin yekun tapşırığıdır.", en: "You are acting as a Planning Engineer — this is the subject's capstone task." },
+          scenario: {
+            az: "Kiçik bir tikinti layihəsi (məs. 1 mərtəbəli anbar) üçün tam cədvəl hazırlamalısınız: WBS-dən başlayıb, asılılıqları müəyyənləşdirib, kritik yolu tapıb, baseline-ı 'dondurmalısınız'.",
+            en: "You must build a full schedule for a small construction project (e.g. a single-storey warehouse): starting from WBS, defining dependencies, finding the critical path, and 'freezing' the baseline."
+          },
+          mentor: {
+            az: "Baseline 'dondurulduqdan' sonra dəyişdirilmir — yalnız təsdiqlənmiş dəyişiklik sorğusu (Change Request) ilə yenilənir. Bu, plan/faktiki müqayisəni mənalı edir.",
+            en: "Once a baseline is 'frozen', it isn't edited — it's only updated via an approved Change Request. This is what makes plan-vs-actual comparison meaningful."
+          },
+          instructions: {
+            az: "1-4-cü tapşırıqlardakı bacarıqları birləşdirərək tam cədvəl paketi (WBS + şəbəkə + kritik yol + baseline qeydi) hazırlayın.",
+            en: "Combine the skills from Tasks 1-4 into a full schedule package (WBS + network + critical path + baseline note)."
+          },
+          format: { az: "Excel faylı", en: "Excel file" },
+          time: { az: "120 dəqiqə", en: "120 minutes" },
+          criteria: { az: ["Bütün elementlər mövcuddur", "Məntiqi ardıcıllıq düzgündür", "Baseline aydın qeyd olunub"], en: ["All elements present", "Logical sequence is correct", "Baseline is clearly noted"] },
+          check: {
+            type: "mc",
+            question: { az: "Baseline dondurulduqdan sonra onu dəyişdirmək üçün nə tələb olunur?", en: "After a baseline is frozen, what is required to change it?" },
+            options: { az: ["Heç nə, istənilən vaxt sərbəst dəyişdirilə bilər", "Təsdiqlənmiş Dəyişiklik Sorğusu (Change Request)", "Yalnız Planning Engineer-in şifahi razılığı"], en: ["Nothing, it can be freely edited anytime", "An approved Change Request", "Just the Planning Engineer's verbal agreement"] },
+            correct: 1
+          }
         }
       ],
       assessment: {
@@ -493,6 +550,12 @@ const DB = {
           org: "PMI",
           type: { az: "Peşəkar standart", en: "Professional standard" },
           why: { az: "Sənayenin ümumi qəbul edilmiş terminologiyasının mənbəyidir.", en: "The source of the industry's globally accepted terminology." }
+        },
+        {
+          title: "Project Stakeholder Management According to the PMBOK",
+          org: "ProjectEngineer.net",
+          type: { az: "Məqalə", en: "Article" },
+          why: { az: "PMBOK-un stakeholder idarəetməsi bölməsini qısa və praktiki formada izah edir.", en: "Explains the PMBOK's stakeholder management area in a short, practical format." }
         }
       ],
       modules: {
@@ -549,6 +612,40 @@ const DB = {
             options: { az: ["RACI düzgün qurulub", "Struktur səhvdir — dəqiqləşdirmək lazımdır", "Bu normaldır, iki nəfər həmişə cavabdeh olmalıdır"], en: ["The RACI is correctly built", "It's a structural error — needs clarifying", "This is normal; two people should always be accountable"] },
             correct: 1
           }
+        },
+        {
+          id: "pmf-t4", difficulty: "FOUNDATION",
+          title: { az: "Tapşırıq 4 — Layihə Nizamnaməsi (Charter)", en: "Task 4 — Project Charter" },
+          role: { az: "Siz Project Coordinator rolundasınız.", en: "You are acting as a Project Coordinator." },
+          scenario: { az: "Menecer sizdən yeni anbar layihəsi üçün qısa Project Charter hazırlamağı istəyir: məqsəd, sponsor, büdcə diapazonu, əsas müddət.", en: "Your manager asks you to draft a short Project Charter for a new warehouse project: purpose, sponsor, budget range, high-level timeline." },
+          mentor: { az: "Charter layihəni RƏSMİ olaraq təsdiqləyən sənəddir — o olmadan layihə rəsmi başlamır. Ümumi səhv: Charter-i Scope Statement ilə qarışdırmaq — Charter daha yüksək səviyyəli və qısadır.", en: "The Charter is the document that formally authorizes a project — without it, the project hasn't officially started. Common mistake: confusing the Charter with the Scope Statement — the Charter is higher-level and shorter." },
+          instructions: { az: "Yarım səhifəlik Charter yazın: Layihənin məqsədi, Sponsor, Təxmini büdcə diapazonu, Əsas müddət.", en: "Write a half-page Charter: Project Purpose, Sponsor, Estimated Budget Range, High-Level Timeline." },
+          format: { az: "Qısa sənəd", en: "Short document" },
+          time: { az: "25 dəqiqə", en: "25 minutes" },
+          criteria: { az: ["Bütün 4 element var", "Qısa və rəsmidir"], en: ["All 4 elements present", "Short and formal"] },
+          check: {
+            type: "mc",
+            question: { az: "Project Charter-in əsas funksiyası nədir?", en: "What is the main function of a Project Charter?" },
+            options: { az: ["Layihəni rəsmi olaraq təsdiqləmək", "Detallı iş qrafiki vermək", "Bütün risklərin siyahısını vermək"], en: ["To formally authorize the project", "To provide a detailed work schedule", "To list all project risks"] },
+            correct: 0
+          }
+        },
+        {
+          id: "pmf-t5", difficulty: "INTERMEDIATE",
+          title: { az: "Tapşırıq 5 — Kommunikasiya Planı", en: "Task 5 — Communication Plan" },
+          role: { az: "Siz Project Coordinator rolundasınız — bu, fənnin yekun tapşırığıdır.", en: "You are acting as a Project Coordinator — this is the subject's capstone task." },
+          scenario: { az: "4 auditoriya qrupu var: Sifarişçi, Daxili komanda, Şəhər İcra Hakimiyyəti, Qonşu sakinlər. Hər biri fərqli tezlik və kanal tələb edir.", en: "There are 4 audience groups: Client, Internal team, City Authority, Neighboring residents. Each requires a different frequency and channel." },
+          mentor: { az: "Kommunikasiya planı 'kim, nə, nə vaxt, hansı kanalla' sualına cavab verir. Ümumi səhv: bütün auditoriyaya eyni tezlikdə (məs. həftəlik) məlumat göndərmək — bu, vacib tərəfləri lazımsız məlumatla yorur.", en: "A communication plan answers 'who, what, when, which channel'. Common mistake: sending all audiences updates at the same frequency (e.g. weekly) — this fatigues key stakeholders with unnecessary detail." },
+          instructions: { az: "4 auditoriya üçün Kommunikasiya Matrisası qurun: Auditoriya, Məzmun, Tezlik, Kanal.", en: "Build a Communication Matrix for the 4 audiences: Audience, Content, Frequency, Channel." },
+          format: { az: "Excel cədvəli", en: "Excel table" },
+          time: { az: "30 dəqiqə", en: "30 minutes" },
+          criteria: { az: ["4 auditoriya daxildir", "Tezlik və kanal auditoriyaya uyğundur"], en: ["All 4 audiences included", "Frequency and channel match the audience"] },
+          check: {
+            type: "mc",
+            question: { az: "Şəhər İcra Hakimiyyəti kimi aşağı maraq/yüksək güc qrupu üçün adətən hansı tezlik uyğundur?", en: "For a low-interest/high-power group like the City Authority, which frequency is usually appropriate?" },
+            options: { az: ["Həftəlik ətraflı hesabat", "Yalnız zəruri hallarda / əsas mərhələlərdə", "Gündəlik yeniləmə"], en: ["Detailed weekly report", "Only when necessary / at key milestones", "Daily update"] },
+            correct: 1
+          }
         }
       ],
       assessment: {
@@ -600,6 +697,12 @@ const DB = {
           org: "YouTube — construction estimation channel",
           type: { az: "Video dərs (YouTube)", en: "Video lesson (YouTube)" },
           why: { az: "Kəmiyyət və smeta işində real istifadə olunan düsturları göstərir.", en: "Shows formulas actually used in real quantity and estimation work." }
+        },
+        {
+          title: "Exceljet — Excel Functions Reference (VLOOKUP, SUMPRODUCT, Pivot Tables)",
+          org: "Exceljet.net",
+          type: { az: "Sənədləşdirmə / Bələdçi", en: "Documentation / Guide" },
+          why: { az: "Hər funksiyanı qısa, aydın nümunələrlə izah edən pulsuz istinad mənbəyidir.", en: "A free reference that explains every function with short, clear examples." }
         }
       ],
       modules: {
@@ -642,6 +745,30 @@ const DB = {
           time: { az: "45 dəqiqə", en: "45 minutes" },
           criteria: { az: ["Fərq düzgün hesablanıb", "Rəng sistemi məntiqlidir", "Dashboard oxunaqlıdır"], en: ["Variance correctly calculated", "Color system is logical", "Dashboard is readable"] },
           check: { type: "mc", question: { az: "Fəaliyyətin faktiki irəliləməsi plandan geri qalırsa, düzgün quraşdırılmış dashboard-da bu hansı rənglə göstərilməlidir?", en: "If an activity's actual progress lags behind plan, what color should a correctly-built dashboard show?" }, options: { az: ["Yaşıl", "Qırmızı", "Göy"], en: ["Green", "Red", "Blue"] }, correct: 1 }
+        },
+        {
+          id: "exe-t4", difficulty: "INTERMEDIATE",
+          title: { az: "Tapşırıq 4 — VLOOKUP ilə Qiymət Cədvəli Birləşdirmə", en: "Task 4 — Merging a Rate Table with VLOOKUP" },
+          role: { az: "Siz Quantity Surveyor Assistant rolundasınız.", en: "You are acting as an Assistant Quantity Surveyor." },
+          scenario: { az: "Material kodları olan kəmiyyət cədvəli və ayrı qiymət cədvəli (kod → vahid qiymət) verilib: M001-Beton-45 AZN, M002-Polad-1800 AZN, M003-Kərpic-0.6 AZN.", en: "A quantity sheet with material codes and a separate rate table (code → unit price) are given: M001-Concrete-45 AZN, M002-Steel-1800 AZN, M003-Brick-0.6 AZN." },
+          mentor: { az: "VLOOKUP(axtarılan_dəyər, cədvəl, sütun_nömrəsi, FALSE) — kodu digər cədvəldə tapıb müvafiq qiyməti gətirir. Ümumi səhv: son arqumenti (FALSE) unutmaq, bu təxmini uyğunluğa səbəb olur.", en: "VLOOKUP(lookup_value, table, column_index, FALSE) finds a code in another table and returns the matching price. Common mistake: forgetting the final FALSE argument, which causes approximate matching." },
+          instructions: { az: "VLOOKUP funksiyası ilə hər material koduna uyğun vahid qiyməti kəmiyyət cədvəlinə gətirin.", en: "Use VLOOKUP to pull the matching unit price into the quantity sheet for each material code." },
+          format: { az: "Excel faylı", en: "Excel file" },
+          time: { az: "25 dəqiqə", en: "25 minutes" },
+          criteria: { az: ["VLOOKUP düzgün istifadə edilib", "FALSE arqumenti var"], en: ["VLOOKUP correctly applied", "FALSE argument included"] },
+          check: { type: "mc", question: { az: "VLOOKUP-un son arqumentini (FALSE) buraxsanız, nə baş verə bilər?", en: "If you omit VLOOKUP's final (FALSE) argument, what can happen?" }, options: { az: ["Heç nə dəyişmir", "Təxmini uyğunluq gətirə bilər — səhv nəticə riski", "Excel xəta verər və işləməz"], en: ["Nothing changes", "It may return an approximate match — risk of a wrong result", "Excel throws an error and won't run"] }, correct: 1 }
+        },
+        {
+          id: "exe-t5", difficulty: "ADVANCED",
+          title: { az: "Tapşırıq 5 — Pivot Table ilə Xülasə Hesabat", en: "Task 5 — Summary Report with a Pivot Table" },
+          role: { az: "Siz Cost Control Engineer rolundasınız — bu, fənnin yekun tapşırığıdır.", en: "You are acting as a Cost Control Engineer — this is the subject's capstone task." },
+          scenario: { az: "50 sətirlik xərc qeydiyyatı (Tarix, Kateqoriya, Məbləğ, Sahə) verilib. Menecer kateqoriya üzrə xülasə istəyir.", en: "A 50-row expense log (Date, Category, Amount, Zone) is given. The manager wants a summary by category." },
+          mentor: { az: "Pivot Table xam məlumatı əl ilə düstur yazmadan qruplaşdırıb cəmləyir — kateqoriya dəyişsə belə, cədvəl bir kliklə yenilənir (Refresh).", en: "A Pivot Table groups and totals raw data without manually writing formulas — even if categories change, the table updates with one click (Refresh)." },
+          instructions: { az: "Pivot Table qurun: sətirlərdə Kateqoriya, dəyərlərdə Məbləğin cəmi. Ən çox xərc olan kateqoriyanı müəyyən edin.", en: "Build a Pivot Table: Category in rows, Sum of Amount in values. Identify the highest-spending category." },
+          format: { az: "Excel faylı", en: "Excel file" },
+          time: { az: "35 dəqiqə", en: "35 minutes" },
+          criteria: { az: ["Pivot Table düzgün qurulub", "Ən yüksək kateqoriya düzgün müəyyənləşdirilib"], en: ["Pivot Table correctly built", "Highest category correctly identified"] },
+          check: { type: "mc", question: { az: "Xam məlumat dəyişəndə Pivot Table-i necə yeniləyirsiniz?", en: "When the raw data changes, how do you update a Pivot Table?" }, options: { az: ["Bütün cədvəli yenidən qurmaqla", "Refresh düyməsi ilə", "Pivot Table avtomatik yenilənir, heç nə etmək lazım deyil"], en: ["By rebuilding the whole table", "With the Refresh button", "It updates automatically, nothing needed"] }, correct: 1 }
         }
       ],
       assessment: {
@@ -694,6 +821,12 @@ const DB = {
           org: "ASCE (American Society of Civil Engineers)",
           type: { az: "Peşəkar kurs", en: "Professional course" },
           why: { az: "QA və QC arasındakı fərqi və sənaye standartlarını rəsmi mənbədən izah edir.", en: "Explains the QA vs QC distinction and industry standards from an authoritative source." }
+        },
+        {
+          title: "Quality in the Constructed Project: A Guide for Owners, Designers, and Constructors (Manual of Practice No. 73)",
+          org: "ASCE",
+          type: { az: "Kitab / Sənaye bələdçisi", en: "Book / Industry guide" },
+          why: { az: "Sifarişçi, dizayner və podratçı arasında keyfiyyət məsuliyyətinin necə bölündüyünü izah edən nüfuzlu bələdçidir.", en: "An authoritative guide explaining how quality responsibility is divided between owner, designer and constructor." }
         }
       ],
       modules: {
@@ -736,6 +869,30 @@ const DB = {
           time: { az: "40 dəqiqə", en: "40 minutes" },
           criteria: { az: ["Ən azı 4 səviyyə var", "Son səbəb sistemlidir, insan səhvi ilə bitmir"], en: ["At least 4 levels deep", "Final cause is systemic, doesn't end at human error"] },
           check: { type: "mc", question: { az: "5 Why təhlili adətən hansı səviyyədə dayanmamalıdır?", en: "At which level should a 5 Whys analysis usually NOT stop?" }, options: { az: ["Sistemli proses səbəbi", "İlk 'işçi səhv etdi' cavabı", "Təchizat zənciri səbəbi"], en: ["A systemic process cause", "The first 'worker made a mistake' answer", "A supply-chain cause"] }, correct: 1 }
+        },
+        {
+          id: "qaqc-t4", difficulty: "FOUNDATION",
+          title: { az: "Tapşırıq 4 — Material Qəbulu İnspeksiyası", en: "Task 4 — Material Receiving Inspection" },
+          role: { az: "Siz QA/QC Engineer rolundasınız.", en: "You are acting as a QA/QC Engineer." },
+          scenario: { az: "Sahəyə çatan polad armatur partiyasının sertifikatı (Mill Certificate) çertyoj tələbindən fərqli diametr göstərir.", en: "A delivered rebar batch's Mill Certificate shows a different diameter than the drawing requires." },
+          mentor: { az: "Material qəbulunda həmişə fiziki material İLƏ onun sənədi (Mill Certificate/Delivery Note) çarpaz yoxlanmalıdır — sənəd tək başına kifayət deyil.", en: "Material receiving must always cross-check the physical material WITH its documentation (Mill Certificate/Delivery Note) — the document alone is never enough." },
+          instructions: { az: "Bu partiyanı qəbul edərsiniz, yoxsa rədd edərsiniz? Qərarınızı əsaslandırın və növbəti addımı yazın.", en: "Would you accept or reject this batch? Justify your decision and state the next step." },
+          format: { az: "Qısa qərar qeydi", en: "Short decision note" },
+          time: { az: "20 dəqiqə", en: "20 minutes" },
+          criteria: { az: ["Qərar əsaslandırılıb", "Növbəti addım realdır"], en: ["Decision is justified", "Next step is realistic"] },
+          check: { type: "mc", question: { az: "Sertifikat çertyoj tələbinə uyğun gəlmirsə, düzgün addım hansıdır?", en: "If the certificate doesn't match the drawing requirement, what is the correct step?" }, options: { az: ["Partiyanı qəbul edib davam etmək", "Partiyanı rədd edib NCR açmaq", "Sertifikatı görməzdən gəlmək"], en: ["Accept the batch and move on", "Reject the batch and raise an NCR", "Ignore the certificate"] }, correct: 1 }
+        },
+        {
+          id: "qaqc-t5", difficulty: "ADVANCED",
+          title: { az: "Tapşırıq 5 — Layihə Keyfiyyət Planı (Real Case)", en: "Task 5 — Project Quality Plan (Real Case)" },
+          role: { az: "Siz QA/QC Manager rolundasınız — bu, fənnin yekun tapşırığıdır.", en: "You are acting as a QA/QC Manager — this is the subject's capstone task." },
+          scenario: { az: "Orta ölçülü bir bina layihəsi üçün Layihə Keyfiyyət Planının strukturunu hazırlamalısınız — beton, armatur və bitirmə işləri üçün ITP-lər daxil olmaqla.", en: "You must draft the structure of a Project Quality Plan for a mid-size building project — including ITPs for concrete, rebar and finishing works." },
+          mentor: { az: "Yaxşı Keyfiyyət Planı 1-4-cü tapşırıqlarda öyrəndiyiniz hər şeyi birləşdirir: ITP-lər, NCR prosesi, kök səbəb təhlili prosedura və material qəbulu qaydaları.", en: "A good Quality Plan combines everything from Tasks 1-4: ITPs, the NCR process, root-cause procedures and material receiving rules." },
+          instructions: { az: "Keyfiyyət Planının strukturunu qurun: Məqsəd, Rollar, İTP-lərin siyahısı, NCR prosesi, Sənədləşdirmə tələbləri.", en: "Build the Quality Plan structure: Purpose, Roles, List of ITPs, NCR process, Documentation requirements." },
+          format: { az: "Sənəd (Word/PDF)", en: "Document (Word/PDF)" },
+          time: { az: "90 dəqiqə", en: "90 minutes" },
+          criteria: { az: ["Bütün bölmələr mövcuddur", "Əvvəlki tapşırıqlarla ardıcıllıq var"], en: ["All sections present", "Consistent with earlier tasks"] },
+          check: { type: "mc", question: { az: "Layihə Keyfiyyət Planı hansı sənədlərə əsaslanaraq qurulmalıdır?", en: "What should a Project Quality Plan be built on?" }, options: { az: ["Yalnız menecerin şəxsi təcrübəsi", "Layihə spesifikasiyaları və müvafiq standartlar (məs. ACI, ISO)", "Digər layihələrin planının kopyası"], en: ["Only the manager's personal experience", "Project specifications and relevant standards (e.g. ACI, ISO)", "A copy of another project's plan"] }, correct: 1 }
         }
       ],
       assessment: {
